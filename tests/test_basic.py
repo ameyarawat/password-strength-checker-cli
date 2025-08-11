@@ -1,9 +1,10 @@
-import json
+import os
+import sys
 
-from password_strength_checker import (
-    analyze_password,
-    build_suggestions,
-)
+# Ensure repository root is on sys.path for module imports when CI sets a different cwd
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from password_strength_checker import analyze_password, build_suggestions
 
 
 def test_very_weak_short_password():
@@ -27,5 +28,3 @@ def test_strong_passphrase_like():
     assert result.score >= 2
     suggestions = build_suggestions(result, 12)
     assert isinstance(suggestions, list)
-
-
