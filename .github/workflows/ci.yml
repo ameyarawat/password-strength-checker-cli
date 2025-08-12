@@ -35,7 +35,3 @@ jobs:
       - name: Run Bandit security checks
         run: |
           bandit -q -r . -x .venv,venv,__pycache__ -s B101
-<<<<<<< HEAD
-
-=======
->>>>>>> 460b95cd22d53485a2781e9c91b0ecece8bd0f1b
