@@ -69,13 +69,13 @@ Suggestions:
 ## Screenshots
 
 ### Weak Password Analysis
-![Weak Password Analysis](screenshots/weak-password.png)
+![Weak Password Analysis](C:\Users\ameya\OneDrive\Pictures\Screenshot\weak-password.png)
 
 ### Strong Password Analysis  
-![Strong Password Analysis](screenshots/strong-password.png)
+![Strong Password Analysis](C:\Users\ameya\OneDrive\Pictures\Screenshot\strong-password.png)
 
 ### JSON Output
-![JSON Output](screenshots/json-output.png)
+![JSON Output](C:\Users\ameya\OneDrive\Pictures\Screenshot\json-output.png)
 
 
 ### License
