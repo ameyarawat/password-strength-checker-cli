@@ -27,8 +27,4 @@ def test_strong_passphrase_like():
     assert result.password_length >= 12
     assert result.score >= 2
     suggestions = build_suggestions(result, 12)
-<<<<<<< HEAD
     assert isinstance(suggestions, list)
-=======
-    assert isinstance(suggestions, list)
->>>>>>> 460b95cd22d53485a2781e9c91b0ecece8bd0f1b
