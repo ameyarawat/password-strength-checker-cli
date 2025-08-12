@@ -65,6 +65,19 @@ Suggestions:
   - Add more random words or increase length to 16+
 ```
 
+
+## Screenshots
+
+### Weak Password Analysis
+![Weak Password Analysis](screenshots/weak-password.png)
+
+### Strong Password Analysis  
+![Strong Password Analysis](screenshots/strong-password.png)
+
+### JSON Output
+![JSON Output](screenshots/json-output.png)
+
+
 ### License
 MIT
 
