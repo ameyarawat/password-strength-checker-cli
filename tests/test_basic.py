@@ -15,14 +15,14 @@ def test_very_weak_short_password():
 
 
 def test_detect_common_patterns():
-    pwd = "Password1234"
+    pwd = "Password1234"  # nosec B105: Test example, not a real password
     result = analyze_password(pwd, min_length=8, do_hibp=False)
     assert any("common word" in f.lower() for f in result.findings)
     assert any("sequence" in f.lower() for f in result.findings)
 
 
 def test_strong_passphrase_like():
-    pwd = "Correct-Horse-Battery-Staple-987!"
+    pwd = "Correct-Horse-Battery-Staple-987!"  # nosec B105: Test example, not a real password
     result = analyze_password(pwd, min_length=12, do_hibp=False)
     assert result.password_length >= 12
     assert result.score >= 2

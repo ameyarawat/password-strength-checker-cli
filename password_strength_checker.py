@@ -203,12 +203,12 @@ def contains_common_words(text: str) -> List[str]:
 
 
 def hibp_query_count(password: str, timeout_seconds: int = 8) -> int:
-    sha1_hex = hashlib.sha1(password.encode("utf-8")).hexdigest().upper()
+    sha1_hex = hashlib.sha1(password.encode("utf-8")).hexdigest().upper()  # nosec B324: HIBP API requires SHA-1 prefix
     prefix = sha1_hex[:5]
     suffix = sha1_hex[5:]
     url = f"https://api.pwnedpasswords.com/range/{prefix}"
     req = urllib.request.Request(url, headers={"User-Agent": "pwd-strength-checker/1.0"})  # type: ignore[attr-defined]
-    with urllib.request.urlopen(req, timeout=timeout_seconds) as resp:  # type: ignore[attr-defined]
+    with urllib.request.urlopen(req, timeout=timeout_seconds) as resp:  # type: ignore[attr-defined] # nosec B310: HIBP API HTTPS only
         body = resp.read().decode("utf-8", errors="replace")
     for line in body.splitlines():
         try:
@@ -346,7 +346,7 @@ def main(argv: List[str]) -> int:
         password = getpass("Enter password to evaluate: ")
 
     # Safety: prevent accidental empty strings
-    if password == "":
+    if password == "":  # nosec B105: Empty string check, not a password
         print("No password provided.")
         return 2
 
