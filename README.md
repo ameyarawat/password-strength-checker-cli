@@ -69,13 +69,19 @@ Suggestions:
 ## Screenshots
 
 ### Weak Password Analysis
-![Weak Password Analysis](screenshots/weak-password.jpg)
+<p align="center">
+  <img src="screenshots/weak-password.jpg" width="700" alt="Weak Password Analysis">
+</p>
 
 ### Strong Password Analysis  
-![Strong Password Analysis](screenshots/strong-password.jpg)
+<p align="center">
+  <img src="screenshots/strong-password.jpg" width="700" alt="Strong Password Analysis">
+</p>
 
 ### JSON Output
-![JSON Output](screenshots/json-output.jpg)
+<p align="center">
+  <img src="screenshots/json-output.jpg" width="700" alt="JSON Output">
+</p>
 
 
 ### License
